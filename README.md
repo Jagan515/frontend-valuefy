@@ -1,17 +1,29 @@
-# React + Vite
+# Portfolio Rebalancing Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The user interface for the Portfolio Rebalancing application, built with a modern React stack.
 
-Currently, two official plugins are available:
+## 🛠️ Technology Stack
+- **React 19**: Standard UI library.
+- **Vite 8**: Next-generation frontend tooling for fast builds.
+- **Tailwind CSS v4**: Utility-first CSS framework (configured with the new Vite plugin).
+- **Axios**: Promised-based HTTP client for API communication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Getting Started
 
-## React Compiler
+### Environment Variables
+Copy `.env.example` to `.env` and configure:
+- `VITE_API_BASE_URL`: The URL of your backend API (default is `http://localhost:5001/api`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Running the App
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+The app will start on port `5173` (or the next available port).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# frontend-valuefy
+## 🧩 UI Components
+- **`Dashboard.jsx`**: The main page container managing state and API flow.
+- **`ClientSelector.jsx`**: Dropdown to select different investors.
+- **`PortfolioView.jsx`**: Table showing current holdings and current allocation.
+- **`RebalanceResult.jsx`**: Displays target vs actual allocation and the recommended BUY/SELL actions.
